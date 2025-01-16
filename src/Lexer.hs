@@ -8,6 +8,7 @@ data Token = TNum Int
              | TMinus        -- -
              | TStar         -- *
              | TSlash        -- /
+             | TMod          -- %
              | TLParen       -- (
              | TRParen       -- )
              | TEquals       -- =
@@ -25,6 +26,7 @@ tokenize (c:cs)
     | c == '-' = TMinus : tokenize cs
     | c == '*' = TStar : tokenize cs
     | c == '/' = TSlash : tokenize cs
+    | c == '%' = TMod : tokenize cs
     | c == '(' = TLParen : tokenize cs
     | c == ')' = TRParen : tokenize cs
     | c == ':' = TColon : tokenize cs

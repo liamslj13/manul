@@ -1,0 +1,22 @@
+# Ignore compiled object files and binaries
+*.hi
+*.o
+*.dyn_o
+*.dyn_hi
+
+# Ignore executable binaries
+*.exe
+
+# Ignore GHC-specific files
+.ghc.environment.*
+.ghci_history
+.hie-bios
+
+# Ignore stack build artifacts
+.stack-work/
+
+# Ignore cabal build artifacts
+dist/
+dist-newstyle/
+cabal.project.local
+cabal.project.local~
